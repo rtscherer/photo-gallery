@@ -67,7 +67,7 @@
 
       <!-- Portfolio Item Heading -->
       <h1 class="my-4">Kitchens
-        <small>by Speranza Construction</span></small>
+        <small>by Business Name</span></small>
       </h1>
 
       <!-- Portfolio Item Row -->
@@ -99,22 +99,19 @@
 
         <div class="container col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img id="open-button" class="img-fluid gallery-image open-button" src="images/img2.jpg" alt="">
-          </a>
-          <!-- <div class="middle">
-            <div class="text"><i class="fa fa-search-plus" style="font-size:60px;color:white;text-shadow:2px 2px 4px #000000;"></i></div>
-          </div> -->
-        </div>
-
-        <div class="col-md-3 col-sm-6 mb-4">
-          <a href="#">
-            <img class="img-fluid gallery-image open-button" src="images/img3.jpg" alt="">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(1);" src="images/img2.jpg" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img class="img-fluid gallery-image" src="images/img4.jpg" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(2);" src="images/img3.jpg" alt="">
+          </a>
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+          <a href="#">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(3);" src="images/img4.jpg" src="http://placehold.it/500x300" alt="">
           </a>
         </div>
 
@@ -145,7 +142,15 @@
       <div class="modal closed" id="modal">
 
         <div class="modal-slides">
-          <img src="images/img3.jpg">
+          <img id="img2" src="images/img2.jpg">
+        </div>
+
+        <div class="modal-slides">
+          <img id="img3" src="images/img3.jpg">
+        </div>
+
+        <div class="modal-slides">
+          <img id="img3" src="images/img4.jpg">
         </div>
 
         <button class="prev" onclick="nextPrevious(-1)">&#10094;</button>
@@ -168,6 +173,7 @@
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/photo-gallery.js"></script>
+    <script src="js/modal.js"></script>
 
   </body>
 
