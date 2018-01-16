@@ -63,6 +63,16 @@ ul {
 .gallery-image {
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 5px;
+  border: 3px solid #000000;
+  object-fit: cover;
+}
+
+.gallery-image-main {
+  transition: .5s ease;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  border: 3px solid #000000;
 }
 
 .gallery-image:hover {
