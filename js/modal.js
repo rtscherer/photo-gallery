@@ -2,12 +2,14 @@
 function openModal() {
   document.getElementById('modal').style.display = "block";
   document.getElementById('modal-overlay').style.display = "block";
+  document.body.classList.add("no-scroll");
 }
 
 // Close the Modal
 function closeModal() {
   document.getElementById('modal').style.display = "none";
   document.getElementById('modal-overlay').style.display = "none";
+  document.body.classList.remove("no-scroll");
 }
 
 // When the user clicks anywhere outside of the modal, close it
@@ -17,6 +19,7 @@ window.onclick = function(event) {
     if (event.target == modalOverlay) {
         modal.style.display = "none";
         modalOverlay.style.display = "none";
+        document.body.classList.remove("no-scroll");
     }
 }
 
