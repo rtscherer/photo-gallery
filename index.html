@@ -84,7 +84,7 @@
       <div class="row">
 
         <div class="col-md-8">
-          <img class="img-fluid" src="images/img1.jpg" alt="">
+          <img class="img-fluid gallery-image" src="images/img1.jpg" onclick="openModal();currentSlide(1);" alt="">
         </div>
 
         <div class="col-md-4">
@@ -109,19 +109,19 @@
 
         <div class="col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(1);" src="images/img2.jpg" alt="">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(2);" src="images/img2.jpg" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(2);" src="images/img3.jpg" alt="">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(3);" src="images/img3.jpg" alt="">
           </a>
         </div>
 
         <div class="col-md-3 col-sm-6 mb-4">
           <a href="#">
-            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(3);" src="images/img4.jpg" src="http://placehold.it/500x300" alt="">
+            <img class="img-fluid gallery-image" onclick="openModal();currentSlide(4);" src="images/img4.jpg" src="http://placehold.it/500x300" alt="">
           </a>
         </div>
 
@@ -147,9 +147,12 @@
       <!-- /.row -->
 
       <!--modal-->
-      <button class="close-btn closed" id="close-button">&#xd7;</button>
+      <div class="close-button closed" id="close-button" onclick="closeModal();">&#xd7;</div>
       <div class="modal-overlay closed" id="modal-overlay"></div>
       <div class="modal closed" id="modal">
+        <div class="modal-slides">
+          <img id="img1" src="images/img1.jpg" alt="testing">
+        </div>
 
         <div class="modal-slides">
           <img id="img2" src="images/img2.jpg">
@@ -160,12 +163,13 @@
         </div>
 
         <div class="modal-slides">
-          <img id="img3" src="images/img4.jpg">
+          <img id="img4" src="images/img4.jpg">
         </div>
 
         <button class="prev" onclick="nextPrevious(-1)">&#10094;</button>
         <button class="next" onclick="nextPrevious(1)">&#10095;</button>
       </div>
+      <div class="caption" id="caption"></div>
       <!-- /.modal-->
 
     </div>

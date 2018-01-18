@@ -2,6 +2,8 @@
 function openModal() {
   document.getElementById('modal').style.display = "block";
   document.getElementById('modal-overlay').style.display = "block";
+  document.getElementById('close-button').style.display = "block";
+  document.getElementById('caption').style.display = "block";
   document.body.classList.add("no-scroll");
 }
 
@@ -9,6 +11,8 @@ function openModal() {
 function closeModal() {
   document.getElementById('modal').style.display = "none";
   document.getElementById('modal-overlay').style.display = "none";
+  document.getElementById('close-button').style.display = "none";
+  document.getElementById('caption').style.display = "none";
   document.body.classList.remove("no-scroll");
 }
 
@@ -16,9 +20,13 @@ function closeModal() {
 window.onclick = function(event) {
     var modal = document.getElementById('modal');
     var modalOverlay = document.getElementById('modal-overlay');
+    var closeButton = document.getElementById('close-button');
+    var caption = document.getElementById('caption');
     if (event.target == modalOverlay) {
         modal.style.display = "none";
         modalOverlay.style.display = "none";
+        closeButton.style.display = "none";
+        caption.style.display = "none";
         document.body.classList.remove("no-scroll");
     }
 }
@@ -57,7 +65,15 @@ function showSlides(n) {
 
   // index is 0 based, so subtract 1 from the index passed in
   var zero_based_index = slide_index - 1;
+  console.log(zero_based_index);
+  console.log(slides[zero_based_index]);
+  console.log("img" + slide_index);
+  console.log(document.getElementById("img" + slide_index).alt);
   slides[zero_based_index].style.display = "block";
   // dots[zero_based_index].className += " active";
-  caption.innerHTML = document.getElementById("img" + slide_index).alt;
+
+  var image_alt_text = document.getElementById("img" + slide_index).alt;
+  if (image_alt_text != null) {
+    caption.innerHTML = image_alt_text;
+  }
 }
